@@ -11,27 +11,43 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-TFBT7VM');</script>
     <!-- End Google Tag Manager -->
+	<script>
+	function displayInfo(el_id_to_display) {
+		if (typeof(el_id_to_display) === "string") {
+			var text = document.getElementById(el_id_to_display);
+			
+			if (text.style.display === "none") {
+			text.style.display = "block";
+			} 
+			else {
+			text.style.display = "none";
+			}
+		} else {
+			return 
+		}
+	};
+	
+	function displayYandexInfo() {displayInfo("yandexInfo")};
+	function displayYandexRoles() {displayInfo("yandexRoles")};
+	function displayYandexStack() {displayInfo("yandexStack")};
+	function displayRWInfo() {displayInfo("rwInfo")};
+	function displayRWRoles() {displayInfo("rwRoles")};
+	function displayRWStack() {displayInfo("rwStack")};
+	</script>
     <style>
+
         body {
             font-family: 'Arial', sans-serif;
+			font-size: 16px; 
             margin: 0;
             padding: 0;
             background-color: #f0f0f0;
             color: #333;
         }
-        header {
-            margin: 2% 0;
-            padding: 2% 0;
-            background-color: #2c3e50;
-            color: #ecf0f1;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            /*
-            align-items: center;
-            */
-        }
+
         h1, h2 {
             /*color: #3498db;*/
+			color: #333;
             margin: 0;
             font-weight: 500;
         }
@@ -52,41 +68,33 @@
             margin: 10px 0;
         }
         .cv-container {
-            display: flex;
-            /* max-width: 900px; */
+            /*
+
+			*/
+			display: flex;			
             margin: 2% auto;
         }
-        .main-column {
-            flex: 3;
-            width: 100%;
-            background-color: #ffffff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 2%;
-            margin-right: 1.5%;
-            margin-left: 8.5%;
-        }
-        .side-column {
-            flex: 1;
+        .main-column { 
             width: 100%;
             background-color: #ffffff;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             padding: 2%;
             margin-right: 8.5%;
-            margin-left: 0.5%;
+			/*
+			margin-right: 1.5%;
+			*/
+            margin-left: 8.5%;
         }
-        .side-column img {
-            border-radius: 50%;
-            width: 75%;
-            margin: auto;
-            display: block;
-            margin-bottom: 5%;
-        }
+
+
         h2 {
             color: rgb(0, 182, 203);
             border-bottom: 2px solid /*#3498db*/ rgb(0, 182, 203);
             padding-bottom: 10px;
             margin-bottom: 20px;
-            text-align: center;
+			padding-top: 10px;
+            margin-top: 20px;
+            text-align: left;
         }
         ul {
             list-style-type: none;
@@ -112,42 +120,98 @@
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #2c3e50;
+            background-color: #ffffff;
             color: #ecf0f1;
             box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
         }
+		
+		
+		header {
+            margin: 2% 0;
+            padding: 2% 0;
+            background-color: #ffffff;
+            color: #ecf0f1;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /*
+			text-align: center;
+            align-items: center;
+            */
+        }
+		
+		div.header-container {
+		    margin-left: 8.5%;
+            margin-right: 8.5%;
+        }
+		
+        div.name {
+			flex: 55;
+            color: #ffffff;
+        }
+		
         div.contacts {
+			flex: 45;
             gap: 3.5%;
             color: #777;
-            display: flex;
-            margin-left: 8.5%;
-            margin-right: 8.5%;
-            /*
-            line-height: 1.6;
-            margin: 1px 0;
-            */
-            flex-flow: row nowrap;
-            align-items: center;
-            align-content: center;
-            justify-content: space-between;
+			
+			border-left: 2px solid /*#3498db*/ rgb(0, 182, 203);
+			font-size: 12px; 
         }
+		
         div.contact {
-        /*
-            height: 50px;
-        */
-        /*
-            width: 25%;
-        */
-            width: 33.333%;
+            /*
+			width: 33.333%;
+			*/
             margin: .5rem;          
         }
+		
+		@media (min-width:1000px){
+		  	div.header-container {
+				display: flex;
+				flex-flow: row nowrap;
+				align-items: center;
+				align-content: center;
+				justify-content: space-between;
+			}
+
+		}
+		
+		div.jobAddInfo {
+            color: #777;			
+			border-left: 2px solid /*#3498db*/ rgb(0, 182, 203);
+			font-size: 12px; 
+			padding: 10px;
+            margin: 20px;
+		}
+		
+		div.jobInfo {
+			padding: 10px;
+            margin: 10px;
+		}
+		
+		button {
+			cursor: pointer;
+			background-color: rgba(51, 51, 51, 0.05);
+			border-radius: 8px;
+			border-width: 0;
+			color: #333333;
+			cursor: pointer;
+			display: inline-block;
+			font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-size: 14px;
+			font-weight: 500;
+			line-height: 20px;
+			list-style: none;
+			margin: 0;
+			padding: 10px 12px;
+			text-align: center;
+			transition: all 200ms;
+			vertical-align: baseline;
+			white-space: nowrap;
+			user-select: none;
+			-webkit-user-select: none;
+			touch-action: manipulation;
+		}
         
-        div.name {
-        /*
-            background-color: #2c3e50;
-        */
-            color: #ffffff
-        }
     </style>
 </head>
 <body>
@@ -157,15 +221,17 @@
     <!-- End Google Tag Manager (noscript) -->
     <header>
         <!-- <img src="https://via.placeholder.com/150" alt="Your Name"> -->
-        <div  class="name">
-        <h1>Andrei Vinogradov</h1>
-        <p style="color: #ffffff; font-size: 18px; line-height: 21px;">Data Analyst<p>
-        <div class="contacts">
-            <!-- <div class="contact">📞 Phone: <span style="color: rgb(0, 182, 203);">+381 62 121 59 68</span></div> -->
-            <div class="contact">📧 Email: <a href="mailto:izummzer@gmail.com" style="color: rgb(0, 182, 203);">izummzer @gmail.com</a></div>
-            <div class="contact">📋 LinkedIn: <a href="https://www.linkedin.com/in/andrei-vinogradov-a3b030230" target="_blank" style="color: rgb(0, 182, 203);">andrei vinogradov</a></div>
-            <div class="contact">🖨️ CV in pdf: <a href="https://raw.githubusercontent.com/Izummzer/Izummzer.github.io/main/files/cv_pdf.pdf" target="_blank" style="color: rgb(0, 182, 203);">download</a></div>
-        </div>
+        <div class="header-container">
+			<div  class="name">
+			<h1>Andrei Vinogradov</h1>
+			<p style="color: #555; font-size: 18px; line-height: 21px;">Data Analyst<p>
+			</div>
+			<div class="contacts">
+				<!-- <div class="contact">📞 Phone: <span style="color: rgb(0, 182, 203);">+381 62 121 59 68</span></div> -->
+				<div class="contact">📧 Email: <a href="mailto:izummzer@gmail.com" style="color: rgb(125, 125, 125);">izummzer@gmail.com</a></div>
+				<div class="contact">📋 LinkedIn: <a href="https://www.linkedin.com/in/andrei-vinogradov-a3b030230" target="_blank" style="color: rgb(125, 125, 125);">www.linkedin.com/in/andrei-vinogradov-a3b030230</a></div>
+				<div class="contact">🖨️ CV in pdf: <a href="https://raw.githubusercontent.com/Izummzer/Izummzer.github.io/main/files/cv_pdf.pdf" target="_blank" style="color: rgb(125, 125, 125);">download</a></div>
+			</div>
         </div>
     </header>
     <div class="cv-container">
@@ -178,30 +244,96 @@
             <h2>Experience</h2>
             <ul>
                 <li>
-                    <span style="color: rgb(0, 182, 203);">Yandex.Eats</span>, Kazakhstan - <strong>Data Analyst</strong> | Mar 2022 - Present
-                    <p>Yandex.Eats, a major international enterprise, specializes in delivering food, groceries, and various items from restaurants and stores. It rapidly expanded by acquiring its main competitor, Delivery Club, renaming it Market Delivery. Initially operating in Kazakhstan, Belarus, Russia, and Armenia, it later extended to Uzbekistan, Côte d'Ivoire, and Zambia. In African countries, the company underwent rebranding, renaming its app to Yango Deli. 
-                    </p><p>So, there are four business streams, which I am working for : Yandex.Eats, Yango Deli, Market Delivery and distribution.
-                    </p><p>Upon commencement of my employment, my primary responsibility was to lead the analytical part of the acquisition team.
-                    </p><p>To be certain, it consisted of the following goals :
-                    <ul class="small_list">
-                    <li>1. Managing data architecture. A lot of efforts were made during Yandex.Eats and Market Delivery integration and, also, while Yandex.Eats launched their service in other foreign markets.
-                    </li><li>2. Developing KPI dashboards to track stream's key metrics (for example CAC, LTV).
-                    </li><li>3. Designing and analyzing experiments, especially, measuring the incremental effect.
-                    </li></ul>
-                    </p>
+                    <span 
+					style="color: rgb(0, 182, 203); cursor: pointer; 
+					font-style: oblique;"
+					onclick="displayYandexInfo()">
+					Yandex.Eats</span>, Kazakhstan - <strong>Data Analyst</strong> | Mar 2022 - Present
+					
+					<div id="yandexInfo" class="jobAddInfo" style="display: none;">
+						<p>Yandex.Eats, a major international enterprise, specializes in delivering food, groceries, and various items from restaurants and stores. It rapidly expanded by acquiring its main competitor, Delivery Club, renaming it Market Delivery. Initially operating in Kazakhstan, Belarus, Russia, and Armenia, it later extended to Uzbekistan, Côte d'Ivoire, and Zambia. In African countries, the company underwent rebranding, renaming its app to Yango Deli. 
+						</p><p>So, there are four business streams, which I am working for : Yandex.Eats, Yango Deli, Market Delivery and distribution.
+						</p>
+					</div>
+					
+					<div class="jobInfo"> What I've managed to do.
+						<p>1. Managed data quality during companies' integration and expansion into foreign markets</p>
+						<p>2. Developed dashboards for acquisition and distribution</p>
+						<p>3. Implemented custom server events</p>
+						<p>4. Provided an attribution model</p>
+						<p>5. Rectified data discrepancies</p>
+					</div>
+					
+					<button onclick="displayYandexRoles()">Roles and responsobilities</button>
+					<div id="yandexRoles" class="jobAddInfo" style="display: none;">
+						<p>Upon commencement of my employment, my primary responsibility was to lead the analytical part of the acquisition team.
+						</p><p>To be certain, it consisted of the following goals :
+						<ul class="small_list">
+						<li>1. Managing data architecture. A lot of efforts were made during Yandex.Eats and Market Delivery integration and, also, while Yandex.Eats launched their service in other foreign markets.
+						</li><li>2. Developing KPI dashboards to track stream's key metrics (for example CAC, LTV).
+						</li><li>3. Designing and analyzing experiments, especially, measuring the incremental effect.
+						</li></ul>
+						</p>
+					</div>
+					
+					<button onclick="displayYandexStack()">Tech stack</button>
+					<div id="yandexStack" class="jobAddInfo" style="display: none;">
+						<p><strong>Languages</strong> : Python, SQL.
+						</p>
+						</p><p><strong>Analytical</strong> systems : Adjust, Appmetrica, Yandex.Metrica, Google Analytics.
+						</p><p><strong>Visualization</strong> tools : DataLense, Tableau.
+						</p><p><strong>Other</strong> tools : YT, GreenPlum, Nirvana, Jupyter, Arcadia.
+						</p>
+					</div>
+					
                 </li>
                 <br/>
                 <li>
-                    <span style="color: rgb(0, 182, 203);">RealWeb Digital Agency</span>, Russia - <strong>Data Analyst</strong> | Nov 2017 - Feb 2022
-                    <p><strong>Responsibilities on Middle Analyst Position</strong>: <br/>
-                    Accountable for providing support to the agency's team and clients in web analytics, constructing data warehouse architecture, performing data analysis with SQL and Python, automating reports, conducting A/B testing, and overseeing advanced tracking setup for various analytics tools.
-                    </p>
-                    <p> 
-                    <strong>On Assistant and Junior Analyst Position</strong>: <br/>
-                    Responsible for establishing data collection processes, working with analytics tools, databases, and visualization, automating data processing, and conducting formal statistical analyses of user behavior.
-                    </p>
+                    <span 
+					style="color: rgb(0, 182, 203); cursor: pointer; 
+					font-style: oblique;"
+					onclick="displayRWInfo()">
+					RealWeb Digital Agency</span>, Russia - <strong>Data Analyst</strong> | Nov 2017 - Feb 2022
+                    
+					<div id="rwInfo" class="jobAddInfo" style="display: none;">
+						<p>Realweb is a full-service digital agency.</p>
+					</div>
+					
+					
+					<div class="jobInfo"> What I've managed to do.
+						<p>1. Managed data quality during companies' integration and expansion into foreign markets</p>
+						<p>2. Developed dashboards for acquisition and distribution</p>
+						<p>3. Implemented custom server events</p>
+						<p>4. Provided an attribution model</p>
+						<p>5. Rectified data discrepancies</p>
+					</div>
+					
+					<button onclick="displayRWRoles()">Roles and responsobilities</button>
+					<div id="rwRoles" class="jobAddInfo" style="display: none;">
+						<ul>
+						<li>Responsibilities on <strong>Middle Analyst Position</strong>: <br/>
+						Accountable for providing support to the agency's team and clients in web analytics, constructing data warehouse architecture, performing data analysis with SQL and Python, automating reports, conducting A/B testing, and overseeing advanced tracking setup for various analytics tools.
+						</li></br>
+						<li> 
+						On Assistant and <strong>Junior Analyst Position</strong>: <br/>
+						Responsible for establishing data collection processes, working with analytics tools, databases, and visualization, automating data processing, and conducting formal statistical analyses of user behavior.
+						</li>
+						</ul>
+					</div>
+					
+					<button onclick="displayRWStack()">Tech stack</button>
+					<div id="rwStack" class="jobAddInfo" style="display: none;">
+						<p><strong>Languages</strong> : Python, SQL, R, JavaScript.
+						</p>
+						</p><p><strong>Analytical</strong> systems : Google Analytics, AppsFlyer, Firebase.
+						</p><p><strong>Visualization</strong> tools : PowerBI, Google Data Studio, Tableau, Qlik.
+						</p><p><strong>Other</strong> tools : Jupyter, BigQuery, Google Tag Manager, Google Optimize.
+						</p>
+					</div>
+					
                     <p><strong>Achivements and cases</strong> : <a href="https://docs.google.com/document/d/1lasbVbRhRl4VvfBtCflVyTJ8Zlp7QLQYEEiWfLIJbgk/edit?usp=sharing" style="color: rgb(0, 182, 203);">link</a>
                     </p>
+					
                 </li>
                 
                 <!-- Add more experience items as needed -->
@@ -218,51 +350,7 @@
                 <!-- Add more education items as needed -->
             </ul>
         </div>
-        <div class="side-column">
-            <img src="https://raw.githubusercontent.com/Izummzer/Izummzer.github.io/main/files/ava.png" alt="Andrei Vinogradov">
-            <h2>Strengths</h2>
-            <ul>
-                <li>Adaptability</li>
-                <li>Problem-solving</li>
-                <li>Team Collaboration</li>
-                <!-- Add more strengths as needed -->
-            </ul>
-
-            <h2>Achievements</h2>
-            <ul> In <span style="color: rgb(0, 182, 203);">Yandex.Eats</span> :
-                <li>Managed data quality during companies' integration and expansion into foreign markets</li>
-                <li>Developed dashboards for acquisition and distribution</li>
-                <li>Implemented custom server events</li>
-                <li>Provided an attribution model</li>
-                <li>Rectified data discrepancies</li>
-                <!-- Add more achievement items as needed -->
-            </ul>
-
-            <h2>Skills</h2>
-            <ul>My tech stack.
-                <li><span style="color: rgb(0, 182, 203);">Languages</span> I've worked with : Python, SQL, R, JavaScript.
-                </li><li><span style="color: rgb(0, 182, 203);">Analytical</span> systems : Adjust, Appmetrica, Yandex.Metrica, Google Analytics, AppsFlyer, Firebase.
-                </li><li><span style="color: rgb(0, 182, 203);">Visualization</span> tools : DataLense, PowerBI, Google Data Studio (a few times Tableau и Qlik)
-                </li><li><span style="color: rgb(0, 182, 203);">Other</span> tools : YT, GreenPlum, Nirvana, Jupyter, Arcadia, BigQuery, Google Tag Manager (GTM), Google Optimize.
-                </li>
-                <!-- Add more skills as needed -->
-            </ul>
-
-            <h2>Languages</h2>
-            <ul>
-                <li>English - B2</li>
-                <li>Russian - native</li>
-                <!-- <li>Swedish - A1</li> -->
-                <!-- Add more language items as needed -->
-            </ul>
-
-            <h2>Passions</h2>
-            <ul>
-                <li>My favorite book : "Harry Potter and the Methods of Rationality" by <span style="color: rgb(0, 182, 203);">Eliezer Yudkowsky</span></li>
-                <!-- Add more passion items as needed -->
-            </ul>
-        </div>
-    </div>
+	</div>
     <footer>
         <p style="color: #777;">&copy; 2024 Andrei Vinogradov. <!-- All rights reserved. --></p>
     </footer>
