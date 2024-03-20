@@ -99,6 +99,7 @@
         ul {
             list-style-type: none;
             padding: 0;
+			color: #555;
         }
         li::before {
             content: "\2022";
@@ -188,6 +189,13 @@
             margin: 10px;
 		}
 		
+		div.jobInfo ul {
+			padding-left: 10px;
+            margin-left: 20px;
+			padding-bottom: 10px;
+			margin-bottom: 20px;
+		}
+		
 		button {
 			cursor: pointer;
 			background-color: rgba(51, 51, 51, 0.05);
@@ -238,7 +246,7 @@
         <div class="main-column">
             <h2>Summary</h2>
             <p>
-                As a Data Analyst, specializing in acquisitions, data architecture, and KPI dashboard development, I aim to leverage analytical skills for impactful contributions in a dynamic environment.
+                As a Data Analyst, specializing in acquisition, data architecture, and KPI dashboard development, I aim to leverage analytical skills for impactful contributions in a dynamic environment.
             </p>
 
             <h2>Experience</h2>
@@ -256,13 +264,53 @@
 						</p>
 					</div>
 					
-					<div class="jobInfo"> What I've managed to do.
-						<p>1. Managed data quality during companies' integration and expansion into foreign markets</p>
-						<p>2. Developed dashboards for acquisition and distribution</p>
-						<p>3. Implemented custom server events</p>
-						<p>4. Provided an attribution model</p>
-						<p>5. Rectified data discrepancies</p>
+					<div class="jobInfo"> <strong><i>Achievements and cases</i></strong>.
+					<p><strong>1.</strong> The reporting system for analyzing acquisition channels has been developed. It allowed:
+					</p>
+					<ul>
+						<li>To monitor the RunRate of KPIs' fact vs. plan (monthly and yearly).
+						</li><li>To evaluate the effectiveness of advertising campaigns (based on metrics such as CAC, predicted LTV, ROAS), make decisions on budget reallocation.
+						</li><li>This saved a lot of time for each marketing manager, who previously spent around 3 hours each week on reporting in Google Sheets (thus, 10 managers -> 120 hours per month).
+						</li>
+					</ul>
+					<p><strong>2.</strong> A pool of A/B tests has been conducted in marketing. It allowed:
+					</p>
+					<ul>
+						<li>To assess cannibalization of brand context ads.
+						</li><li>To conduct an uplift evaluation of certain channels and negotiate payment only for incremental orders (saving up to 40%).
+						</li>
+					</ul>
+					<p><strong>3.</strong> Several attribution models have been developed, the best one for the business has been chosen, implemented in production (in dashboards, and integrated into analytics systems). It allowed:
+					</p>
+					<ul>
+						<li>To assess channels and optimize advertising campaigns more accurately.
+						</li><li>Also, redefine payments to CPA-platforms based on this attribution model, which saved us in some cases up to 50% of the budget.
+						</li>
+					</ul>
+					<p><strong>4.</strong> A set of works has been carried out to attract potentially promising user audiences. In result:
+					</p>
+					<ul>
+						<li>Events with predicted LTV for the user have been implemented together with the Data Science team. These events were integrated into analytical systems.
+						</li><li>Also, events of churned users were implemented in analytical systems. It allowed us to use churn-events and LTV-events to optimize advertising campaigns.
+						</li><li>The most active users based on the LCG matrix (RFM) in other Yandex services were found. We used these audiences in advertising campaigns.
+						</li>
+					</ul>
+					<p><strong>5.</strong> Work has been done to clean and correct data. It allowed:
+					</p><ul>
+						<li>To remove discrepancies that amounted to about +-34% for the main key metric.
+						</li>
+					</ul>
+					<p><strong>6.</strong> A significant amount of work has been done on data management at the stage of companies merging. It allowed:
+					</p>
+					<ul>
+						<li>To maintain data collection consistency.
+						</li><li>To integrate all the data of the new service into the existing dashboard architecture.
+						</li><li>To launch advertising campaigns for the new service within the established deadlines.
+						</li>
+					</ul>					
+					
 					</div>
+										
 					
 					<button onclick="displayYandexRoles()">Roles and responsobilities</button>
 					<div id="yandexRoles" class="jobAddInfo" style="display: none;">
@@ -287,7 +335,7 @@
 					</div>
 					
                 </li>
-                <br/>
+                <br/><br/>
                 <li>
                     <span 
 					style="color: rgb(0, 182, 203); cursor: pointer; 
@@ -300,12 +348,20 @@
 					</div>
 					
 					
-					<div class="jobInfo"> What I've managed to do.
-						<p>1. Managed data quality during companies' integration and expansion into foreign markets</p>
-						<p>2. Developed dashboards for acquisition and distribution</p>
-						<p>3. Implemented custom server events</p>
-						<p>4. Provided an attribution model</p>
-						<p>5. Rectified data discrepancies</p>
+					<div class="jobInfo"> <strong><i>Achievements and cases</i></strong>.
+						<p><strong>1.</strong> For the client “Perekrestok Vprok” :
+						</p>
+						<ul>
+							<li>A dashboard has been developed to evaluate the effectiveness of media placements and optimize the campaigns. We talked more about the approach itself and the architecture of the solution at the webinar.  
+							</li><li>A cohort dashboard has been built. Based on this report, conclusions were drawn about the payback of advertising activity and the disclosure of cohorts. 
+							</li><li>The project "Perekrestok + Brand" was implemented together with Google. This allowed the customer to introduce a new service and sell it. More about the project : there is a brand that buys media ads (for example, Mondelez or Pepsi). This brand does not have its own online store, but it usually wants to know how its media has influenced purchases. It is possible to assess the impact of the media on purchases of branded goods on retailers' websites (Perekrestok). To do this, a script was written in ADH that combines the brand's advertising statistics with purchases on the Perekrestok website. My supervisor presented this case at the 2021 Matemarketing. 
+							</li><li>Implemented CJM using the “Retentioneering” library. “Retentioneering” allows you to represent the user's path in the form of graphs, which makes it possible to find problem areas that are not visible when analyzing funnels.
+							</li>
+						</ul>
+						<p><strong>2.</strong> An audience study was conducted for the client of the Sber EApteka, as well as databases for analyzing marketing activity (web and app) were built.
+						</p>
+						<p><strong>3.</strong> Other <i>achievements and cases</i> : <a href="https://docs.google.com/document/d/1lasbVbRhRl4VvfBtCflVyTJ8Zlp7QLQYEEiWfLIJbgk/edit?usp=sharing" style="color: rgb(0, 182, 203);">link</a>
+                    </p>
 					</div>
 					
 					<button onclick="displayRWRoles()">Roles and responsobilities</button>
@@ -330,9 +386,7 @@
 						</p><p><strong>Other</strong> tools : Jupyter, BigQuery, Google Tag Manager, Google Optimize.
 						</p>
 					</div>
-					
-                    <p><strong>Achivements and cases</strong> : <a href="https://docs.google.com/document/d/1lasbVbRhRl4VvfBtCflVyTJ8Zlp7QLQYEEiWfLIJbgk/edit?usp=sharing" style="color: rgb(0, 182, 203);">link</a>
-                    </p>
+					<br/><br/>
 					
                 </li>
                 
